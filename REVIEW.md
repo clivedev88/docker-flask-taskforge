@@ -1,18 +1,55 @@
-# TaskForge (Docker + Flask Practice)
+# TaskForge — Diário de Aprendizado
 
 Projeto didático para praticar **Python**, **Flask** e **Docker** do zero.
 
-## Objetivo do MVP (Nível Básico)
-- Backend: API Flask com dados **mockados** (sem banco)
-- Frontend: Flask + Jinja + Bootstrap consumindo a API
-- Rodar local (primeiro) e depois com Docker
+---
 
-## Progress Log (didático)
-### B1 — Base do projeto
-- Criada a estrutura inicial (frontend/backend/docs)
+## PASSO 1 — Base do Projeto
+
+### Objetivo
+Criar a estrutura inicial do projeto e preparar o ambiente de desenvolvimento.
+
+### O que foi feito
+- Criada a estrutura de pastas (`frontend`, `backend`, `docs`)
 - Git inicializado
-- Ambientes virtuais configurados (venv)
-- Flask instalado em cada app
+- Ambientes virtuais (venv) configurados separadamente para frontend e backend
+- Flask instalado em cada aplicação
+- Arquivos `requirements.txt` criados
 
-## Como rodar (por enquanto)
-Em breve.
+### O que aprendi
+- A importância de usar ambientes virtuais
+- Separação clara entre frontend e backend
+- Boas práticas iniciais de versionamento
+
+---
+
+## PASSO 2 — Instalação de Dependências
+
+### Backend
+```bash
+cd backend
+python -m venv venv
+.\venv\Scripts\Activate.ps1
+pip install -r requirements.txt
+
+### Frontend
+```
+cd frontend
+python -m venv venv
+.\venv\Scripts\Activate.ps1
+pip install -r requirements.txt
+```
+
+📌 Observação:
+Este projeto inicia com dados mockados. O banco de dados será introduzido apenas em níveis posteriores.
+
+
+---
+
+# 4️⃣ Versionamento correto agora (MUITO IMPORTANTE)
+
+Depois das correções:
+
+```powershell
+git add README.md REVIEW.md
+git commit -m "docs: improve README and learning review documentation"
