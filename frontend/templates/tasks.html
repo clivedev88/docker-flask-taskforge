@@ -1,0 +1,33 @@
+
+{% extends "base.html" %}
+
+{% block content %}
+
+<h2 class="mb-4">Tarefas</h2>
+
+<ul class="list-group">
+
+  {% for task in tasks %}
+  
+    <li class="list-group-item d-flex justify-content-between">
+      <span>{{ task.title }}</span>
+      
+      {% if task.completed %}
+
+        <span class="badge bg-success">Concluída</span>
+
+      {% else %}
+
+        <span class="badge bg-warning text-dark">Pendente</span>
+
+      {% endif %}
+
+    </li>
+
+  {% endfor %}
+
+</ul>
+
+<a href="/" class="btn btn-link mt-3">← Voltar</a>
+
+{% endblock %}
