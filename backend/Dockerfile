@@ -1,13 +1,10 @@
 # 1. imagem base
-# FROM python:3.12-slim
 FROM python:3.12-slim
 
 # 2. diretório de trabalho dentro do container
-# WORKDIR /app
 WORKDIR /app
 
 # 3. copiar dependências primeiro (isto é uma boa prática de cache)
-# COPY requirements.txt  .
 COPY requirements.txt .
 
 # 4. instalar dependências
@@ -15,13 +12,10 @@ COPY requirements.txt .
 RUN pip install -r requirements.txt
 
 # 5. Copiar o resto do código
-# COPY . .
 COPY . .
 
 # 6. expor a porta da API
-# EXPOSE 5000
 EXPOSE 5000
 
 # 7. rodar a aplica;ão
-# CMD ["python", "app.py"]
 CMD [ "python", "app.py" ]

@@ -1,9 +1,11 @@
+import os
 from flask import Flask, render_template
 import requests
 
 app = Flask(__name__)
 
-BACKEND_URL = 'http://127.0.0.1:5000'
+# BACKEND_URL = 'http://127.0.0.1:5000'
+BACKEND_URL = os.getenv("BACKEND_URL", "http://127.0.0.1:5000")
 
 @app.route('/')
 def home():

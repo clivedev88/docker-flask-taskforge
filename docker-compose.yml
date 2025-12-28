@@ -1,16 +1,18 @@
-version: '3.9'
+version: "3.9"
 
 services:
   backend:
     build: ./backend
     container_name: taskforge-backend
     ports:
-    - "5000:5000"
-    
+      - "5000:5000"
+
   frontend:
     build: ./frontend
     container_name: taskforge-frontend
     ports:
-      -"5001-5001"
+      - "5001:5001"
+    environment:
+      - BACKEND_URL=http://backend:5000
     depends_on:
       - backend
